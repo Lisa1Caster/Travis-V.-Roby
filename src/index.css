@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@layer base {
+  :root,
+  [data-theme="navy-brass"] {
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* 60% Dominant Neutral Canvas (Warm Alabaster Stone) */
+    --bg-canvas: #F7F5F0;
+    --bg-subtle: #ECE8DF;
+
+    /* 30% Structural Deep Surface (Midnight Oxford Navy) */
+    --color-primary: #111C2D;
+    --color-primary-dark: #0B1320;
+    --color-muted: #4A5568;
+
+    /* 10% High-Intent Accent (Brushed Architectural Brass) */
+    --color-accent: #D4AF6A;
+    --color-accent-hover: #C59D53;
+    --color-accent-deep: #8C6624;
+    --color-on-accent: #111C2D;
+  }
+
+  [data-theme="emerald-champagne"] {
+    --bg-canvas: #F6F7F4;
+    --bg-subtle: #E8ECE5;
+    --color-primary: #132822;
+    --color-primary-dark: #0C1B17;
+    --color-muted: #475953;
+    --color-accent: #D8B472;
+    --color-accent-hover: #C8A15A;
+    --color-accent-deep: #826124;
+    --color-on-accent: #132822;
+  }
+
+  [data-theme="obsidian-copper"] {
+    --bg-canvas: #F8F6F4;
+    --bg-subtle: #EDE8E3;
+    --color-primary: #1C1917;
+    --color-primary-dark: #12100E;
+    --color-muted: #57534E;
+    --color-accent: #E08E68;
+    --color-accent-hover: #D07A52;
+    --color-accent-deep: #9A4824;
+    --color-on-accent: #1C1917;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-primary);
+    background-color: var(--bg-canvas);
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono-tabular {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
